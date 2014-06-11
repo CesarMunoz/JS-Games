@@ -114,7 +114,7 @@ function buildPaddle()
 
 function buildPuck()
 {
-	console.log("buildPuck");
+	// console.log("buildPuck");
 
 	puck = new createjs.Shape();
 	puck.graphics.beginFill('#FFF').drawRect(0, 0, 10, 10);
@@ -130,14 +130,14 @@ function buildPuck()
 
 function setControls()
 {
-	console.log("setControls");
+	// console.log("setControls");
 	window.onkeydown = handleKeyDown;
 	window.onkeyup = handleKeyUp;
 }
 
 function handleKeyDown(e)
 {
-	console.log("key down");
+	// console.log("key down");
 	switch (e.keyCode) {
 		case ARROW_KEY_LEFT:
 			leftKeyDown = true;
@@ -150,7 +150,7 @@ function handleKeyDown(e)
 
 function handleKeyUp(e)
 {
-	console.log("key up");
+	// console.log("key up");
 	switch (e.keyCode) {
 		case ARROW_KEY_LEFT:
 			leftKeyDown = false;
@@ -217,7 +217,7 @@ function newLevel()
 			level--;
 		}
 	}
-	console.log('bricks.length: '+bricks.length);
+	// console.log('bricks.length: '+bricks.length);
 }
 
 function shiftBricksDown()
@@ -326,8 +326,8 @@ function updatePaddle() {
 function updatePuck() {
 	var nextX = puck.x + puck.velX;
 	var nextY = puck.y + puck.velY;
-	console.log("nextX: "+nextX);
-	console.log("nextY: "+nextY);
+	// console.log("nextX: "+nextX);
+	// console.log("nextY: "+nextY);
 
 	if (nextX < leftWall) {
 		nextX = leftWall;
@@ -347,14 +347,14 @@ function updatePuck() {
 }
 
 function checkPaddle () {
-	console.log("puck.nextY: "+puck.nextY);
-	console.log("paddle.y: "+paddle.y);
-	console.log("paddle.height: "+paddle.height);
+	// console.log("puck.nextY: "+puck.nextY);
+	// console.log("paddle.y: "+paddle.y);
+	// console.log("paddle.height: "+paddle.height);
 
 	var a = paddle.y;
 	var b = paddle.height;
 	var c = a-b;
-	console.log(" C: "+c);
+	// console.log(" C: "+c);
 
 	if( puck.velY > 0 && puck.isAlive && puck.nextY > c && puck.nextX >= paddle.x && puck.nextX <= (paddle.x + paddle.width) )
 	{
