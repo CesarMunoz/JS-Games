@@ -5,65 +5,11 @@
 	<title></title>
 
 	<script src="js/createjs-2013.12.12.min.js"></script>
-
+    <script src="js/puzzle.js"></script>
 	<!-- <link rel="stylesheet" href="css/screen.css"> -->
 </head>
-<body onload="init()">
+<body>
 <canvas id="canvas" width="1000" height="800" style="border: black solid 1px"></canvas>
 </body>
-<script>
-	var stage;
-	var queue;
-    function init() {
-    	/*queue = new createjs.LoadQueue();
-        queue.installPlugin(createjs.Sound);
-		queue.addEventListener("complete", loadComplete);
-        queue.loadManifest([
-            {id:"butterfly", src:"images/butterfly.png"},
-            {id:"woosh", src:"sounds/woosh.mp3"},
-            {id:"chime", src:"sounds/chime.mp3"}
-		]);*/
-		setupStage();
-	}
 
-    /*function loadComplete() {
-        setupStage();
-        buildButterflies();
-    }*/
-
-    function setupStage() {
-    	stage = new createjs.Stage('canvas');
-        createjs.Ticker.setFPS(60);
-        createjs.Ticker.addEventListener("tick", function(){
-            stage.update();
-        });
-
-        var g = new createjs.Graphics().beginStroke('#000').beginFill('#FF0000').drawRect(0,0,100,100);
-		var square = new createjs.Shape(g);
-		square.regX = square.regY = 50;
-		square.x = stage.canvas.width / 2;
-		square.y = stage.canvas.height / 2;
-		stage.addChild(square);
-		createjs.Tween.get(square).to({rotation:360},3000);
-    }
-
-    /*function buildButterflies() {
-        var img = queue.getResult("butterfly");
-        var i, sound, butterfly;
-        for (i = 0; i < 3; i++) {
-            butterfly = new createjs.Bitmap(img);
-            butterfly.x = i * 200;
-            stage.addChild(butterfly);
-            createjs.Tween.get(butterfly).wait(i * 1000).to({y:100}, 1000,
-               createjs.Ease.quadOut).call(butterflyComplete);
-            sound = createjs.Sound.play('woosh',createjs.Sound.INTERRUPT_NONE,i * 1000);
-	}}
-
-    function butterflyComplete(){
-        stage.removeChild(this);
-        if(!stage.getNumChildren()){
-            createjs.Sound.play('chime');
-	    }
-	}*/
-</script>
 </html>
