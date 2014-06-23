@@ -81,7 +81,7 @@ function swapPieces()
 	var piece1 = selectedPieces[0];
 	var piece2 = selectedPieces[1];
 	createjs.Tween.get(piece1).wait(300).to({x:piece2.x, y:piece2.y});
-	createjs.Tween.get(piece3).wait(300).to({x:piece1.x, y:piece1.y}).call(function(){
+	createjs.Tween.get(piece2).wait(300).to({x:piece1.x, y:piece1.y}).call(function(){
 		setTimeout(evalPuzzle, 200);
 	});
 
@@ -90,6 +90,7 @@ function swapPieces()
 
 function evalPuzzle()
 {
+	console.log("EVAL");
 	var win = true;
 	var i, piece;
 	selectedPieces[0].uncache();
@@ -107,6 +108,8 @@ function evalPuzzle()
 			alert('YOU DID IT!');
 		}, 200);
 	}else{
+		console.log('NO WIN');
+
 		selectedPieces = [];
 	}
 }
