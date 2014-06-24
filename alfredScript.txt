@@ -1,12 +1,12 @@
 # Create our new project directory
-cd /Users/Cesar/Dropbox/WIP/JS-Games && mkdir {query} && cd {query}
+cd /Users/cmunoz/Dropbox/WIP/JS-Games && mkdir {query} && cd {query}
 # Begin by copying our BB template to the new folder
-cp -R /Users/Cesar/Dropbox/WIP/JS-Games/template/ .
+cp -R /Users/cmunoz/Dropbox/WIP/JS-Games/gruntTemplate .
 # Pull in Backbone
-curl http://backbonejs.org/backbone-min.js > js/libs/backbone.js
+#curl http://backbonejs.org/backbone-min.js > js/libs/backbone.js
 # Pull in Underscore
-curl http://underscorejs.org/underscore-min.js > js/libs/underscore.js
+#curl http://underscorejs.org/underscore-min.js > js/libs/#underscore.js
 # Pull in jQuery
-curl http://code.jquery.com/jquery.js > js/libs/jquery.js
+#curl http://code.jquery.com/jquery.js > js/libs/jquery.js
 # Open our new project in Sublime Text
 /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .
