@@ -25,9 +25,9 @@ function init ()
 	stage = new createjs.Stage(document.getElementById('canvas'));
 	console.log('INIT');
 	buildCards();
-	// shuffleCards();
-	// dealCards();
-	// startGame();
+	shuffleCards();
+	dealCards();
+	startGame();
 }
 
 function buildCards()
@@ -61,9 +61,29 @@ function buildCards()
 	};
 }
 
+function shuffleCards()
+{
+	var i, card, randomIndex;
+	var l = cards.length;
+	var shuffleCards = [];
+	for (i=0;i<l;i++)
+	{
+		randomIndex = Math.floor(Math.random()*cards.length);
+		shuffleCards.push(cards[randomIndex]);
+		cards.splice(randomIndex, 1);
+	}
+	cards.concat(shuffleCards);
+}
 
+function dealCards()
+{
 
+}
 
+function startGame()
+{
+
+}
 
 
 
