@@ -82,9 +82,9 @@ module.exports = function(grunt) {
       js: {
         files: ['<%= jshint.gameScripts %>'],
         tasks: [
-          // 'concat:gameScripts',
-          'jshint:gameScripts'
-          // 'uglify:gameScripts'
+          'concat:gameScripts',
+          'jshint:gameScripts',
+          'uglify:gameScripts'
         ]
       },
       less: {
