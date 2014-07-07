@@ -1,0 +1,20 @@
+{
+  "name": "COACH_TEMPLATE",
+  "version": "0.1.6",
+  "author": "Cesar Munoz",
+  "description": "Package json for use with Gruntfile.js for all JS-Games projects",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-recess": "~0.4.0",
+    "matchdep": "~0.1.2"
+  }
+}
